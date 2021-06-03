@@ -1,0 +1,8 @@
+#bootstrap-overrides .navbar-brand,
+a {
+  color: white;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+}

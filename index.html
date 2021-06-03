@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Import bootstrap via CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>Web Visualization Dashboard</title>
+  </head>
+  <body id="bootstrap-overrides">
+    <nav
+      class="navbar navbar-expand-sm navbar-light"
+      style="background-color:teal"
+    >
+      <a class="navbar-brand">Latitude</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#collapsibleNavBar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavBar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link dropdown-toggle"
+              id="DropDownLink"
+              role="button"
+              data-toggle="dropdown"
+              >Plots</a
+            >
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="DropDownLink"
+              style="background-color: teal"
+            >
+              <li class="dropdown-item">
+                <a href="temperature.html">Temperature</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="humidity.html">Humidity</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="cloudiness.html">Cloudiness</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="windspeed.html">Windspeed</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm">
+            <h2>Summary: Latitude vs X</h2>
+          <div class="card" style="width:auto">
+            <div class="card-header">
+              This website is to present you the graphs and data of
+              python-api-challenge.Inorder to generate the weather graphs, we
+              used openweathermap api and data.To create the graphs,compare the
+              plots for different variables against latitude we used matplotlib.
+              The main purpose of the analysis is to findout how latitude
+              affects temperature, windspeed, humidity and cloudiness.
+            </div>
+          </div>
+        </div>
+    <div class="col-sm">
+        <h2>Visualizations</h2>
+        <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col">
+                    <div class="card">
+                        <img src="https://raw.githubusercontent.com/supraja2710/python-api-challenge/main/Images/CityLatitude_vs_MaxTemperature.png" alt="CityLatitude_vs_MaxTemperature">
+    
+                    </div>
+                </div>
+                <div class="col">
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/supraja2710/python-api-challenge/main/Images/CityLatitude_vs_Cloudiness.png" alt="CityLatitude_vs_Cloudiness">
+        
+                        </div>
+                 </div>
+                <div class="col">
+                     <div class="card">
+                        <img src="https://raw.githubusercontent.com/supraja2710/python-api-challenge/main/Images/CityLatitude_vs_Humidity.png" alt="CityLatitude_vs_Humidity">
+            
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://raw.githubusercontent.com/supraja2710/python-api-challenge/main/Images/CityLatitude_vs_WindSpeed.png" alt="CityLatitude_vs_WindSpeed">
+                
+                        </div>
+                </div>
+
+        </div>
+    </div>
+    </div>
+        <!-- <div class="col-ml-6">
+          <h2>Visualizations</h2>
+          <div class="row row-cols-1 row-cols-sm-2 g-0">
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/maxtemp_all.png"
+                  class="card-img-top"
+                  alt="Temperature"
+                />
+                <div class="card-body">
+                  <a href="temperature.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/humidity_all.png"
+                  class="card-img-top"
+                  alt="Humidity"
+                />
+                <div class="card-body">
+                  <a href="humidity.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/cloudcover_all.png"
+                  class="card-img-top"
+                  alt="Cloudiness"
+                />
+                <div class="card-body">
+                  <a href="cloudiness.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/windspeed_all.png"
+                  class="card-img-top"
+                  alt="Wind speed"
+                />
+                <div class="card-body">
+                  <a href="windspeed.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>
+
+<!-- 
+
+
+    <div class="container-fluid">
+      <div class="row" style="background:transparent url('images/cloudy.jpg')">
+        <div class="col-sm-6">
+          <div class="card" style="width:auto">
+            <div class="card-header">
+              Welcome to the companion website for the python-api-challenge! We
+              used 'numpy' to generate 500 random coordinates, 'citipy' to
+              locate the city nearest to each coordinate, and then 'requests'
+              along with 'json' to query weather data for each city from
+              openweathermap.org/api. We then used 'matplotlib' to make
+              scatterplots comparing different weather variables against
+              latitude.
+            </div>
+            <img
+              src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/maxtemp_all.png"
+              class="card-img-top"
+              alt="Temperature_image"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Click on the GitHub link below to access the GitHub repository
+                containing all source code and analyses.
+              </p>
+              <div class="card-body">
+                <a
+                  href="https://github.com/coreydevinanderson/python-api-challenge"
+                  class="btn btn-primary btn-large"
+                  alt="GitHub link"
+                  >GitHub link</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h2>Visualizations</h2>
+          <div class="row row-cols-1 row-cols-sm-2 g-0">
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/maxtemp_all.png"
+                  class="card-img-top"
+                  alt="Temperature"
+                />
+                <div class="card-body">
+                  <a href="temperature.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/humidity_all.png"
+                  class="card-img-top"
+                  alt="Humidity"
+                />
+                <div class="card-body">
+                  <a href="humidity.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/cloudcover_all.png"
+                  class="card-img-top"
+                  alt="Cloudiness"
+                />
+                <div class="card-body">
+                  <a href="cloudiness.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://raw.githubusercontent.com/coreydevinanderson/python-api-challenge/master/WeatherPy/Images/windspeed_all.png"
+                  class="card-img-top"
+                  alt="Wind speed"
+                />
+                <div class="card-body">
+                  <a href="windspeed.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html> -->
